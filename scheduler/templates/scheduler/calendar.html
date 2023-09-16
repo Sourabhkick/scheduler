@@ -1,0 +1,16 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calendar</title>
+</head>
+<body>
+    <h1>Event Calendar</h1>
+    <ul>
+        {% for event in events %}
+            <li>{{ event.title }} - {{ event.start_time }} to {{ event.end_time }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'create_event' %}">Create Event</a>
+</body>
+</html>
